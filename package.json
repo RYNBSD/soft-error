@@ -1,0 +1,34 @@
+{
+  "name": "soft-error",
+  "version": "1.0.0",
+  "description": "Lightweight TypeScript utilities for safe async/sync error handling",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "typescript",
+    "error-handling",
+    "async",
+    "promise",
+    "utilities",
+    "soft-error"
+  ],
+  "author": "Your Name you@example.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/soft-error.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/soft-error/issues"
+  },
+  "homepage": "https://github.com/yourusername/soft-error#readme",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
