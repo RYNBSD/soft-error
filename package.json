@@ -18,16 +18,16 @@
     "utilities",
     "soft-error"
   ],
-  "author": "Your Name you@example.com",
+  "author": "Rayen Boussayed rynbsd04@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/soft-error.git"
+    "url": "https://github.com/RYNBSD/soft-error.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/soft-error/issues"
+    "url": "https://github.com/RYNBSD/soft-error/issues"
   },
-  "homepage": "https://github.com/yourusername/soft-error#readme",
+  "homepage": "https://github.com/RYNBSD/soft-error#readme",
   "devDependencies": {
     "typescript": "^5.8.3"
   }
