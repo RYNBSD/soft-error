@@ -53,14 +53,17 @@ export function trySync<E extends Error, R>(
  * @template E - The Error type that may have been thrown.
  * @template R - The return type of the handler.
  */
-export type TryCatchResult<E extends Error, R> = {
-  /** The return value if successful, or null if an error occurred. */
-  value: R | null;
-  /** The caught error if one was thrown, or null on success. */
-  error: E | null;
-  /** True if fn executed without error, false otherwise. */
-  ok: boolean;
-};
+export type TryCatchResult<E extends Error, R> =
+  | {
+      value: R;
+      error: null;
+      ok: true;
+    }
+  | {
+      value: null;
+      error: E;
+      ok: false;
+    };
 
 /**
  * Executes a synchronous function handler, capturing its value and any error.
@@ -85,7 +88,9 @@ export function tryCatchSync<E extends Error, R>(
   const value = trySync<E, R>(fn, (err) => {
     error = err;
   });
-  return { value, error, ok: !error };
+  return error
+    ? { value: null, error, ok: false }
+    : { value: value as R, error: null, ok: true };
 }
 
 /**
@@ -166,5 +171,7 @@ export async function tryCatchAsync<E extends Error, R>(
   const value = await tryAsync<E, R>(fn, (err) => {
     error = err;
   });
-  return { value, error, ok: !error };
+  return error
+    ? { value: null, error, ok: false }
+    : { value: value as R, error: null, ok: true };
 }
