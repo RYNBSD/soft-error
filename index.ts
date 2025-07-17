@@ -81,13 +81,6 @@ export type CatchResult<E extends Error, R> =
     };
 
 /**
- * @deprecated Use {@link catchSync} instead.
- *
- * Maintained for backward compatibility.
- */
-export const tryCatchSync = catchSync;
-
-/**
  * Executes a synchronous function handler, capturing its return value and any thrown error.
  *
  * @template E - The specific Error subclass to catch and record.
@@ -177,11 +170,6 @@ export async function tryAsync<E extends Error, R>(
     return null;
   }
 }
-
-/**
- * @deprecated Use {@link catchAsync} instead.
- */
-export const tryCatchAsync = catchAsync;
 
 /**
  * Executes an async or sync function/promise, capturing its result and any thrown error.
