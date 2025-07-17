@@ -1,3 +1,5 @@
+//! Refactor all the api
+
 /**
  * Synchronous function handler type.
  * Represents a function that takes no arguments and returns a value of type T.
