@@ -1,5 +1,5 @@
 .gitignore
 node_modules
-tsconfig.json
 README.md
-index.ts
+.npmignore
+index.test.js
